@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_landmarks"
+        android:icon="@drawable/ic_location_city_black_24dp"
+        android:title="@string/title_landmarks" />
+
+    <item
+        android:id="@+id/navigation_museums"
+        android:icon="@drawable/ic_account_balance_black_24dp"
+        android:title="@string/title_museums" />
+
+    <item
+        android:id="@+id/navigation_parks"
+        android:icon="@drawable/ic_nature_people_black_24dp"
+        android:title="@string/title_parks" />
+
+    <item
+        android:id="@+id/navigation_restaurants"
+        android:icon="@drawable/ic_restaurant_black_24dp"
+        android:title="@string/title_restaurants" />
+</menu>

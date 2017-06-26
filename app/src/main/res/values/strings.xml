@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Bucharest Guide App</string>
+    <string name="title_landmarks">Landmarks</string>
+    <string name="title_museums">Museums</string>
+    <string name="title_parks">Parks</string>
+    <string name="title_restaurants">Restaurants</string>
+</resources>
