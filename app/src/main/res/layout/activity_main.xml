@@ -12,7 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        app:itemBackground="?android:attr/windowBackground"
+        android:background="@android:color/white"
+        android:elevation="8dp"
+        app:elevation="8dp"
         app:menu="@menu/navigation" />
 
     <android.support.v4.view.ViewPager

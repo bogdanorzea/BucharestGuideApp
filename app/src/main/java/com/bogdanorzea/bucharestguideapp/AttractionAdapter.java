@@ -33,10 +33,6 @@ class AttractionAdapter extends ArrayAdapter<Attraction> {
         TextView defaultTextView = (TextView) listItemView.findViewById(R.id.name);
         defaultTextView.setText(currentAttraction.getName());
 
-        // Set the Attraction description
-        TextView miwokTextView = (TextView) listItemView.findViewById(R.id.description);
-        miwokTextView.setText(currentAttraction.getDescription());
-
         // Return the view
         return listItemView;
     }
