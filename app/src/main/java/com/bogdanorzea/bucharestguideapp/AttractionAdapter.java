@@ -57,6 +57,10 @@ class AttractionAdapter extends ArrayAdapter<Attraction> {
             }
         });
 
+        // Set the Attraction map
+        ImageView img = (ImageView) listItemView.findViewById(R.id.image);
+        img.setImageResource(currentAttraction.getImageId());
+
 
         // Return the view
         return listItemView;

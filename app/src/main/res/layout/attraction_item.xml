@@ -4,21 +4,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingLeft="8dp"
-    android:paddingRight="8dp"
-    android:paddingTop="8dp">
+    android:paddingLeft="@dimen/padding_layout"
+    android:paddingRight="@dimen/padding_layout"
+    android:paddingTop="@dimen/padding_layout">
 
     <ImageView
+        android:id="@+id/image"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:elevation="3sp"
+        android:layout_height="@dimen/attraction_image_height"
         android:gravity="center"
         android:scaleType="centerCrop"
-        android:src="@drawable/placeholder_img" />
+        tools:src="@drawable/placeholder_img" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="@dimen/attraction_layout_text_height"
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
@@ -35,8 +35,8 @@
             android:id="@+id/browser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="4dp"
+            android:layout_marginLeft="@dimen/button_margin"
+            android:layout_marginRight="@dimen/button_margin_half"
             android:layout_weight="0"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:clickable="true"
@@ -46,8 +46,8 @@
             android:id="@+id/map"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="4dp"
-            android:layout_marginRight="8dp"
+            android:layout_marginLeft="@dimen/button_margin_half"
+            android:layout_marginRight="@dimen/button_margin"
             android:layout_weight="0"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:clickable="true"

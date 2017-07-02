@@ -19,11 +19,7 @@ public class Attraction implements Parcelable {
     private String mWebsite;
     private double mLongitude;
     private double mLatitude;
-
-    public Attraction(String name, String description) {
-        mName = name;
-        mWebsite = description;
-    }
+    private int mImageId;
 
     protected Attraction(Parcel in) {
         mName = in.readString();
@@ -32,11 +28,16 @@ public class Attraction implements Parcelable {
         mLongitude = in.readDouble();
     }
 
-    public Attraction(String name, String website, double latitude, double longitude) {
+    public Attraction(String name, String website, double latitude, double longitude, int imageId) {
         mName = name;
         mWebsite = website;
         mLatitude = latitude;
         mLongitude = longitude;
+        mImageId = imageId;
+    }
+
+    public int getImageId() {
+        return mImageId;
     }
 
     public double getLongitude() {

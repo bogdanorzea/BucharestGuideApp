@@ -13,8 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@android:color/white"
-        android:elevation="8dp"
-        app:elevation="8dp"
+        android:elevation="@dimen/bnv_elevation"
+        app:elevation="@dimen/bnv_elevation"
         app:menu="@menu/navigation" />
 
     <android.support.v4.view.ViewPager
