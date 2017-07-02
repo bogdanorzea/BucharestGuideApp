@@ -16,16 +16,35 @@ public class Attraction implements Parcelable {
         }
     };
     private String mName;
-    private String mDescription;
+    private String mWebsite;
+    private double mLongitude;
+    private double mLatitude;
 
     public Attraction(String name, String description) {
         mName = name;
-        mDescription = description;
+        mWebsite = description;
     }
 
     protected Attraction(Parcel in) {
         mName = in.readString();
-        mDescription = in.readString();
+        mWebsite = in.readString();
+        mLatitude = in.readDouble();
+        mLongitude = in.readDouble();
+    }
+
+    public Attraction(String name, String website, double latitude, double longitude) {
+        mName = name;
+        mWebsite = website;
+        mLatitude = latitude;
+        mLongitude = longitude;
+    }
+
+    public double getLongitude() {
+        return mLongitude;
+    }
+
+    public double getLatitude() {
+        return mLatitude;
     }
 
     @Override
@@ -36,14 +55,16 @@ public class Attraction implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(mName);
-        dest.writeString(mDescription);
+        dest.writeString(mWebsite);
+        dest.writeDouble(mLatitude);
+        dest.writeDouble(mLongitude);
     }
 
     public String getName() {
         return mName;
     }
 
-    public String getDescription() {
-        return mDescription;
+    public String getWebsite() {
+        return mWebsite;
     }
 }
