@@ -1,10 +1,13 @@
 package com.bogdanorzea.bucharestguideapp;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -27,11 +30,33 @@ class AttractionAdapter extends ArrayAdapter<Attraction> {
         }
 
         // Get the current attraction from the list
-        Attraction currentAttraction = mAttractions.get(position);
+        final Attraction currentAttraction = mAttractions.get(position);
 
         // Set the Attraction name
         TextView defaultTextView = (TextView) listItemView.findViewById(R.id.name);
         defaultTextView.setText(currentAttraction.getName());
+
+        // Set the Attraction website
+        ImageView openWebsite = (ImageView) listItemView.findViewById(R.id.browser);
+        openWebsite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getContext().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(currentAttraction.getWebsite())));
+            }
+        });
+
+        // Set the Attraction map
+        ImageView openMap = (ImageView) listItemView.findViewById(R.id.map);
+        openMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                double lat = currentAttraction.getLatitude();
+                double lon = currentAttraction.getLongitude();
+                getContext().startActivity(new Intent(Intent.ACTION_VIEW,
+                        Uri.parse("geo:<" + lat + ">,<" + lon + ">?q=<" + lat + ">,<" + lon + ">(" + currentAttraction.getName() + ")")));
+            }
+        });
+
 
         // Return the view
         return listItemView;

@@ -38,6 +38,8 @@
             android:layout_marginLeft="8dp"
             android:layout_marginRight="4dp"
             android:layout_weight="0"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
             android:src="@drawable/ic_open_in_browser_black_48dp" />
 
         <ImageView
@@ -47,6 +49,8 @@
             android:layout_marginLeft="4dp"
             android:layout_marginRight="8dp"
             android:layout_weight="0"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
             android:src="@drawable/ic_map_black_48dp" />
 
     </LinearLayout>
